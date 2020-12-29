@@ -23,10 +23,10 @@
     </header>
     <nav class="navigation">
         <span class="create-icon__wrapper">
-            <i class="fa fa-plus create-icon" aria-hidden="true" onclick="createUser()"></i>
+            <i class="fa fa-plus create-icon" aria-hidden="true" onclick="openCreateUserPopup()"></i>
         </span>
     </nav>
-    <div id="createModal" class="modal fade" role="dialog">
+    <div id="createModal" class="modal" role="dialog" >
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -34,19 +34,21 @@
                     <h4 class="modal-title">Create User</h4>
                 </div>
                 <div class="modal-body" name="createForm">
-                    <div class="form-group">
-                        <label for="fname">User's Name</label>
-                        <input type="text" class="form-control" id="fname" placeholder="Enter name" value="">
+                    <div id="create-form">
                     </div>
-                    <div class="form-group">
+                    <!-- <div class="form-group"> -->
+                        <!-- <label for="fname">User's Name</label> -->
+                        <!-- <input type="text" class="form-control" id="fname" placeholder="Enter name" value=""> -->
+                    <!-- </div> -->
+                    <!-- <div class="form-group">
                         <label for="age">Age</label>
                         <input type="number" class="form-control" id="age" placeholder="Age" value="">
                     </div>
                     <div class="form-group">
                         <label for="education">Education</label>
                         <input type="text" class="form-control" id="education" placeholder="Enter Education" value="">
-                    </div>
-                    <button type="submit" class="btn btn-primary" id="create">Create</button>
+                    </div> -->
+                    <button type="submit" class="btn btn-primary" id="create" onclick="createUser()">Create</button>
                     <button type="submit" class="btn btn-primary" id="save">Update</button>
                 </div>
                 <div class="modal-footer">
@@ -95,7 +97,7 @@
                     </th>
                 </tr>
             </thead>
-            <tbody id="table">
+            <tbody id="tbody">
             </tbody>
             <!-- <tr>
                 <td id="user">
